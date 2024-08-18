@@ -11,9 +11,12 @@ Caso os dados de entrada fossem ordenados pelo timestamp, poderíamos realizar a
 # Funções
 
 1 - Análise de quantidades de requisições por dia (para captura de possiveis ataques de sobrecarga como DoS ou DDoS)
+
 2 - Análise de extensões solicitadas (para buscar possíveis sinks/sources maliciosas e tentativas de execuções de comando
+
 3 - Inspeção de caracteres suspeitos como: "<", ">", "^", "\", "-"
-4 - User-Agents maliciosos
+
+4 - Busca por User-Agents maliciosos
 
 # Como funcionam as regras?
 
@@ -39,12 +42,19 @@ O arquivo entry_logs.txt possui registro de TODOS os acessos não bloqueados no 
 
 A lista de acessos é um arquivo json que possui tanto a whitelist quanto a blocklist, a estrutura do arquivo é: 
 
-/- Blocklist
+\- Blocklist:
+
 	Ip
+ 
 	Threat_Level
+ 
 	TimeStamp
-/- Whitelist
+ 
+ 
+\- Whitelist:
+
 	Ip
+ 
 
 o timestamp é utilizado para registro desbloqueio após 12h	
 
@@ -64,5 +74,5 @@ após isso, execute:
 node index.js
 ```
 
-Em seguida, você pode configurar ou alterar manualmente as regras do firewall no arquivos do projeto.
+Em seguida, você pode configurar ou alterar manualmente as regras do firewall inserindo ou removendo os itens desejados nos arquivos do projeto.
 
