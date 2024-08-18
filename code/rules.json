@@ -1,0 +1,42 @@
+{
+  "firewall_rules": {
+    "block_user_agent": [
+      "Gobuster",
+      "Dirbuster"
+    ],
+    "block_ext": [
+      ".exe",
+      ".bat",
+      ".cmd",
+      ".vbs",
+      ".jse",
+      ".wsf",
+      ".scr",
+      ".msi",
+      ".dll",
+      ".ps1",
+      ".sh",
+      ".pl",
+      ".cgi",
+      ".jar",
+      ".apk",
+      ".ini",
+      ".bak"
+    ],
+    "suspicious_chars": [
+      "<",
+      ">",
+      "'",
+      "\"",
+      "|",
+      "[",
+      "]",
+      "^",
+      "%"
+    ],
+    "req_rules": {
+      "max_requests": 30,
+      "blocking_time": "12:00:00"
+    }
+  }
+}
